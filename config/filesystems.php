@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'default' => 'sftp',
+    'default' => 'local',
 
     /*
     |--------------------------------------------------------------------------
@@ -28,7 +28,7 @@ return [
     |
     */
 
-    'cloud' => 'sftp',
+    'cloud' => 'ftp',
 
     /*
     |--------------------------------------------------------------------------
@@ -46,18 +46,6 @@ return [
         'local' => [
             'driver' => 'local',
             'root'   => storage_path('app'),
-        ],
-
-        'sftp' => [
-            'driver'     => 'sftp',
-            'host'       => env('FS_SFTP_HOST'),
-            'port'       => 22,
-            'username'   => env('FS_SFTP_USERNAME'),
-            'password'   => env('FS_SFTP_PASSWORD'),
-            'privateKey' => env('FS_SFTP_PRIVATEKEY'),
-            'root'       => env('FS_SFTP_ROOT'),
-            'timeout'    => 100,
-            'directoryPerm' => 0755,
         ],
 
         's3' => [
@@ -81,3 +69,4 @@ return [
     ],
 
 ];
+

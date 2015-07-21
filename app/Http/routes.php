@@ -32,9 +32,6 @@ Route::post('auth/register', 'Auth\AuthController@postRegister');
 
 Route::get('/admin', 'AdminController@index');
 
-/*Route::get('/admin/news','NewsController@index');
-Route::get('/admin/news/create','NewsController@create');
-Route::post('/admin/news','NewsController@store');*/
 Route::resource('admin/news','NewsController');
 
 Route::post('image/upload', function(){
