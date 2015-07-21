@@ -1,11 +1,11 @@
-@extends('layouts.admin.mastermenu')
+@extends('layouts.admin.master')
 
-@section('mtitle')
+@section('title')
     OSHU - Admin
 @stop
 
 
-@section('mcontent')
+@section('content')
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">Hallo</h1>
