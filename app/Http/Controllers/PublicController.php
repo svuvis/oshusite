@@ -9,7 +9,6 @@ class PublicController extends Controller
 
     public function index()
     {
-        Storage::disk('ftp')->put('file.txt', 'Contents');
         $news = News::latest()->get();
         return view('pages.public.index')->with('news',$news);
     }
