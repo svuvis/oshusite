@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="MySQL - forge@178.62.182.43" uuid="7340b8e1-a074-40d7-ab37-04e69098d75e">
+      <secret-storage>master_key</secret-storage>
+      <user-name>forge</user-name>
+      <schema-pattern>forge.*</schema-pattern>
+      <default-schemas>forge.*</default-schemas>
+    </data-source>
+    <data-source name="MySQL - local@localhost" uuid="c232f3d6-a568-42d6-950c-8e40b23f21ac">
+      <secret-storage>master_key</secret-storage>
+      <user-name>local</user-name>
+      <schema-pattern>local.*</schema-pattern>
+      <default-schemas>local.*</default-schemas>
+    </data-source>
+  </component>
+</project>
