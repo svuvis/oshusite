@@ -1,6 +1,6 @@
 <?php
 
-
+ini_set('display_errors', 1);
 
 Route::get('/', 'PublicController@index');
 Route::get('/oshu', 'PublicController@oshu');
