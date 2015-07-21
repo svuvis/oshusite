@@ -5,42 +5,33 @@
 @stop
 
 @section('content')
-
-    <form method="POST" action="/auth/register">
-        {!! csrf_field() !!}
-
-        <div>
-            Name
-            <input type="text" name="name" value="{{ old('name') }}">
+    <div class="row" style="margin: 50px">
+        <div class="col-lg-6 col-md-offset-3">
+    {!! Form::open() !!}
+        <div class="form-group @if($errors->has('name')) has-error @endif">
+            {!! Form::label('name','Naam') !!}
+            {!! Form::text('name', null, ['class' => 'form-control', 'value' => Input::old('name')]) !!}
+            @if ($errors->has('name')) <p class="help-block">{{ $errors->first('name') }}</p> @endif
         </div>
-
-        <div>
-            Email
-            <input type="email" name="email" value="{{ old('email') }}">
+        <div class="form-group @if($errors->has('email')) has-error @endif">
+            {!! Form::label('email','Email') !!}
+            {!! Form::email('email', null, ['class' => 'form-control', 'value' => Input::old('email')]) !!}
+            @if ($errors->has('email')) <p class="help-block">{{ $errors->first('email') }}</p> @endif
         </div>
-
-        <div>
-            Password
-            <input type="password" name="password">
+        <div class="form-group @if($errors->has('password')) has-error @endif">
+            {!! Form::label('password','Password') !!}
+            {!! Form::password('password', ['class' => 'form-control', 'value' => Input::old('password')]) !!}
+            @if ($errors->has('password')) <p class="help-block">{{ $errors->first('password') }}</p> @endif
         </div>
-
-        <div>
-            Confirm Password
-            <input type="password" name="password_confirmation">
+        <div class="form-group @if($errors->has('password_confirmation')) has-error @endif">
+            {!! Form::label('password_confirmation','Password Confirmation') !!}
+            {!! Form::password('password_confirmation', ['class' => 'form-control', 'value' => Input::old('password_confirmation')]) !!}
+            @if ($errors->has('password_confirmation')) <p class="help-block">{{ $errors->first('password_confirmation') }}</p> @endif
         </div>
-
-        <div>
-            <button type="submit">Register</button>
-        </div>
-    </form>
-
-    @if(count($errors) > 0)
-        <div class="alert alert-danger">
-            <ul>
-                @foreach($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
+        <div class="form-group">
+            {!! Form::submit('Registreer', ['class' => 'btn btn-primary form-control']) !!}
+        </div>     
+    {!! Form::close() !!}
+    </div>
+    </div>
 @stop
