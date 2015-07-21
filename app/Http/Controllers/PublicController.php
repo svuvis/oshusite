@@ -9,7 +9,7 @@ class PublicController extends Controller
 
     public function index()
     {
-        Storage::put('file5.txt', 'test');
+        /*Storage::put('file5.txt', 'test');*/
         $news = News::latest()->get();
         return view('pages.public.index')->with('news',$news);
     }
