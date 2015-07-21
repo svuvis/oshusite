@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1860387a-9551-4804-b337-6093e3a30de8" name="Default" comment="sftp en ftp weg">
+    <list default="true" id="1860387a-9551-4804-b337-6093e3a30de8" name="Default" comment="">
       <change type="DELETED" beforePath="C:\Users\Jelle\Documents\Code\oshusite\.idea\.name" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Jelle\Documents\Code\oshusite\.idea\blade.xml" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Jelle\Documents\Code\oshusite\.idea\commandlinetools\Composer_19_7_15_19_26_c.xml" afterPath="" />
@@ -20,14 +20,6 @@
       <change type="DELETED" beforePath="C:\Users\Jelle\Documents\Code\oshusite\.idea\oshusite.iml" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Jelle\Documents\Code\oshusite\.idea\vcs.xml" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Jelle\Documents\Code\oshusite\.idea\workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Jelle\Documents\Code\oshusite\app\Providers\SftpServiceProvider.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/PublicController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/PublicController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_ide_helper.php" afterPath="$PROJECT_DIR$/_ide_helper.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/filesystems.php" afterPath="$PROJECT_DIR$/config/filesystems.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
     </list>
     <ignored path="oshusite.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -619,7 +611,13 @@
       <option name="project" value="LOCAL" />
       <updated>1437506707314</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="sftp en ftp en .idea weg">
+      <created>1437511119980</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1437511119980</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TodoView">
@@ -694,7 +692,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="white screen test" />
     <MESSAGE value="sftp en ftp weg" />
-    <option name="LAST_COMMIT_MESSAGE" value="sftp en ftp weg" />
+    <MESSAGE value="sftp en ftp en .idea weg" />
+    <option name="LAST_COMMIT_MESSAGE" value="sftp en ftp en .idea weg" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
