@@ -4,10 +4,6 @@
     OSHU
 @stop
 
-@section('oshusactive')
-    active
-@stop
-
 @section('content')
     <section class="animated fadeIn">
         <div class="container" style="margin-top:30px">

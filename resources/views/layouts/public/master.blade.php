@@ -71,19 +71,19 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-mind-collapse">
                 <ul class="nav navbar-nav">
-                    <li class="dropdown @yield('homeactive')">
+                    <li class="dropdown {{ set_active(['/']) }}">
                         {!! HTML::link('/', 'Home', ['class'=>'dropdown-toggle']) !!}
                     </li> <!-- dropdown -->
-                    <li class="dropdown @yield('newsactive')">
+                    <li class="dropdown {{ set_active(['nieuws*']) }}">
                         {!! HTML::link('/nieuws', 'Nieuws', ['class'=>'dropdown-toggle']) !!}
                     </li> <!-- dropdown -->
-                    <li class="dropdown @yield('oshuactive')">
+                    <li class="dropdown {{ set_active(['oshu']) }}">
                         {!! HTML::link('/oshu', 'Wat doet de OSHU', ['class'=>'dropdown-toggle']) !!}
                     </li> <!-- dropdown -->
-                    <li class="dropdown @yield('bestuuractive')">
+                    <li class="dropdown {{ set_active(['bestuur']) }}">
                         {!! HTML::link('/bestuur', 'OSHU Bestuur', ['class'=>'dropdown-toggle']) !!}
                     </li> <!-- dropdown -->
-                    <li class="dropdown @yield('agendaactive')">
+                    <li class="dropdown {{ set_active(['agenda']) }}">
                         {!! HTML::link('/agenda', 'Agenda', ['class'=>'dropdown-toggle']) !!}
                     </li> <!-- dropdown -->
                 </ul> <!-- nav nabvar-nav -->

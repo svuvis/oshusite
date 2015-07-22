@@ -4,10 +4,6 @@
     OSHU - Home
 @stop
 
-@section('homeactive')
-    active
-@stop
-
 @section('content')
 <section>
     <div id="oshusitehomeslider" class="carousel carousel-mind slide" data-ride="carousel" data-interval="5000">

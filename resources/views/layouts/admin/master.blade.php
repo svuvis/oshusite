@@ -44,9 +44,6 @@
 <!-- Bootstrap Core JavaScript -->
 {!! HTML::script('js/bootstrap.min.js') !!}
 
-<!-- Metis Menu Plugin JavaScript -->
-{!! HTML::script('js/metisMenu.min.js') !!}
-
 <!-- Custom Theme JavaScript -->
 {!! HTML::script('js/sb-admin-2.js') !!}
 

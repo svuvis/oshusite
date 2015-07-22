@@ -4,10 +4,6 @@
     OSHU - Agenda
 @stop
 
-@section('agendaactive')
-    active
-@stop
-
 @section('content')
     <div class="container">
         <section style="margin-top: 40px">

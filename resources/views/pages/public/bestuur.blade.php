@@ -4,10 +4,6 @@
     OSHU - Bestuur
 @stop
 
-@section('bestuuractive')
-    active
-@stop
-
 @section('content')
     <div class="container">
         <div class="row">
