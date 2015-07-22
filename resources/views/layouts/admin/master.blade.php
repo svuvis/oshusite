@@ -44,9 +44,6 @@
 <!-- Bootstrap Core JavaScript -->
 {!! HTML::script('js/bootstrap.min.js') !!}
 
-<!-- Custom Theme JavaScript -->
-{!! HTML::script('js/sb-admin-2.js') !!}
-
 @yield('js')
 
 </body>
