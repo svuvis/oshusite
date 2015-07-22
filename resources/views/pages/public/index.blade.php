@@ -1,10 +1,10 @@
 @extends('layouts.public.master')
 
 @section('title')
-    OSHU - Nieuws
+    OSHU - Home
 @stop
 
-@section('nieuwsactive')
+@section('homeactive')
     active
 @stop
 
@@ -66,7 +66,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8">
-                <h2 class="section-title">Nieuws</h2>
+                <h2 class="section-title">Laatse Nieuws</h2>
+                @if(count($news) != 0)
                 @foreach($news as $new)
                 <div class="panel panel-primary">
                     <div class="panel-heading">
@@ -77,6 +78,9 @@
                     </div>
                 </div>
                 @endforeach
+                @else
+                    <p>Er zijn op dit moment geen nieuws artikelen</p><br /><br />
+                @endif
             </div>
             @include('includes.public.svmenu')
         </div>

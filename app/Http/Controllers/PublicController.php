@@ -2,6 +2,7 @@
 
 
 use App\News;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Response;
 use Storage;
@@ -12,13 +13,32 @@ class PublicController extends Controller
 
     public function index()
     {
-        $news = News::latest()->get();
+        $news = News::latest()->take(3)->get();
         return view('pages.public.index')->with('news', $news);
     }
 
     public function oshu()
     {
         return view('pages.public.oshu');
+    }
+
+    public function news($page)
+    {
+        Carbon::setLocale('nl');
+        $posts = News::all()->count();
+        $pages = ceil($posts / 3);
+        if($page > $pages){
+            return redirect('nieuws/1');
+        }
+        $news = News::latest()->skip(($page - 1) * 3)->take(3)->get();
+        return view('pages.public.news')->with(['news' => $news,'page' => $page, 'pages' => $pages]);
+    }
+
+    public function article($id)
+    {
+        Carbon::setLocale('nl');
+        $article = News::find($id);
+        return view('pages.public.article')->with('article',$article);
     }
 
     public function bestuur()

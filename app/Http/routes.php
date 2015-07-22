@@ -3,6 +3,11 @@
 ini_set('display_errors', 1);
 
 Route::get('/', 'PublicController@index');
+Route::get('/nieuws/', function(){
+    return redirect('/nieuws/1');
+});
+Route::get('/nieuws/{page}', 'PublicController@news')->where('page', '^0*[1-9]\d*$');
+Route::get('/nieuws/artikel/{id}', 'PublicController@article')->where('id', '^0*[1-9]\d*$');
 Route::get('/oshu', 'PublicController@oshu');
 Route::get('/bestuur', 'PublicController@bestuur');
 Route::get('/agenda', 'PublicController@agenda');
