@@ -124,7 +124,7 @@ class PublicController extends Controller
 
         //Push file to S3
         \Tinify\setKey(\Config::get('services.tinify.key'));
-        $image = \Tinify\fromBuffer(file_get_contents($file))->toBuffer();
+        $image = \Tinify\fromBuffer(file_get_contents($file))->resize(array('width' => 1920,'height' => 1080))->toBuffer();
         $move = Storage::disk('s3')->put('oshu/' . $filename, $image);
         Storage::disk('s3')->setVisibility('oshu/'.$filename, 'public');
 
