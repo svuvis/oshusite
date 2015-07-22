@@ -2,7 +2,10 @@
 
 
 use App\News;
+use Illuminate\Http\Request;
+use Response;
 use Storage;
+use Validator;
 
 class PublicController extends Controller
 {
@@ -10,7 +13,7 @@ class PublicController extends Controller
     public function index()
     {
         $news = News::latest()->get();
-        return view('pages.public.index')->with('news',$news);
+        return phpinfo();;
     }
 
     public function oshu()
@@ -97,6 +100,39 @@ class PublicController extends Controller
     {
         return view('pages.public.studieverenigingen.fem.forum');
     }
+
+    public function upload(Request $request)
+    {
+        if(!$request->hasFile('file'))
+            return Response::json(['error' => 'No File Sent']);
+
+        if(!$request->file('file')->isValid())
+            return Response::json(['error' => 'File is not valid']);
+
+        $file = $request->file('file');
+
+        $v = Validator::make(
+            $request->all(),
+            ['file' => 'required|mimes:jpeg,jpg,png|max:8000']
+        );
+
+        if($v->fails())
+            return Response::json(['error' => $v->errors()]);
+
+        //Use some method to generate your filename here. Here we are just using the ID of the image
+        $filename = 'oshu'.uniqid('', true).'.'.$file->getClientOriginalExtension();
+
+        //Push file to S3
+        $move = Storage::disk('s3')->put('oshu/' . $filename, file_get_contents($file));
+        Storage::disk('s3')->setVisibility('oshu/'.$filename, 'public');
+
+        if($move){
+            return Response::json(['filelink'=>'http://d3ie1hv55ztzyy.cloudfront.net/'. $filename]);
+        }else{
+            return Response::json(['error'=>true]);
+        }
+    }
+
 
 
 }

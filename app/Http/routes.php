@@ -34,15 +34,6 @@ Route::get('/admin', 'AdminController@index');
 
 Route::resource('admin/news','NewsController');
 
-Route::post('image/upload', function(){
-    $image = Input::file('file');
-    $filename = 'oshu'.uniqid('', true).'.'.$image->getClientOriginalExtension();
 
-    $move = Image::make($image->getRealPath())->save('uploads/images/original/'.$filename);
-    if($move){
-        return Response::json(['filelink'=>'/uploads/images/original/'. $filename]);
-    }else{
-        return Response::json(['error'=>true]);
-    }
-});
+Route::post('image/upload', 'PublicController@upload');
 
