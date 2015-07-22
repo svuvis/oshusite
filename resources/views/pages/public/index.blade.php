@@ -74,6 +74,7 @@
                         <h3 class="panel-title">{{ $new->title }}</h3>
                     </div>
                     <div class="panel-body">
+                        <div style="padding-bottom: 10px"><i class="fa fa-clock-o"></i> {!! Carbon\Carbon::parse($new->created_at)->diffForHumans() !!}</div>
                         {!! $new->body !!}
                     </div>
                 </div>

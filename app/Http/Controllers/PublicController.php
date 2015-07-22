@@ -13,6 +13,7 @@ class PublicController extends Controller
 
     public function index()
     {
+        Carbon::setLocale('nl');
         $news = News::latest()->take(3)->get();
         return view('pages.public.index')->with('news', $news);
     }
