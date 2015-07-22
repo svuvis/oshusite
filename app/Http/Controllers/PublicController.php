@@ -13,7 +13,7 @@ class PublicController extends Controller
     public function index()
     {
         $news = News::latest()->get();
-        return phpinfo();;
+        return view('pages.public.index')->with('news', $news);
     }
 
     public function oshu()
@@ -113,7 +113,7 @@ class PublicController extends Controller
 
         $v = Validator::make(
             $request->all(),
-            ['file' => 'required|mimes:jpeg,jpg,png|max:8000']
+            ['file' => 'required|mimes:jpeg,jpg,png|max:10000']
         );
 
         if($v->fails())
@@ -123,7 +123,9 @@ class PublicController extends Controller
         $filename = 'oshu'.uniqid('', true).'.'.$file->getClientOriginalExtension();
 
         //Push file to S3
-        $move = Storage::disk('s3')->put('oshu/' . $filename, file_get_contents($file));
+        \Tinify\setKey(\Config::get('services.tinify.key'));
+        $image = \Tinify\fromBuffer(file_get_contents($file))->toBuffer();
+        $move = Storage::disk('s3')->put('oshu/' . $filename, $image);
         Storage::disk('s3')->setVisibility('oshu/'.$filename, 'public');
 
         if($move){

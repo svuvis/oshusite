@@ -35,4 +35,8 @@ return [
         'secret' => '',
     ],
 
+    'tinify' => [
+        'key' => env('TF_KEY'),
+    ],
+
 ];

@@ -5,7 +5,7 @@
 @stop
 
 @section('mcss')
-{!! HTML::style('/css/redactor.css') !!}
+    {!! HTML::style('/css/redactor.css') !!}
 @stop
 
 @section('mjs')
@@ -13,14 +13,13 @@
     {!! HTML::script('js/table.js') !!}
     {!! HTML::script('js/video.js') !!}
     <script type="text/javascript">
-        $(function()
-        {
+        $(function () {
             $('#body').redactor({
                 focus: true,
                 imageUpload: '{{ url() }}/image/upload?_token=' + '{{ csrf_token() }}',
                 plugins: ['table', 'video'],
                 maxHeight: 300,
-                minHeight: 300
+                minHeight: 300,
             });
         });
     </script>
@@ -28,18 +27,18 @@
 
 
 @section('mcontent')
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-lg-12">
-            <h1 class="page-header">Nieuwsbericht Toevoegen</h1>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Nieuwsbericht Toevoegen</h1>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-lg-6">
-            {!! Form::open(['url' => 'admin/news']) !!}
+        <div class="row">
+            <div class="col-lg-6">
+                {!! Form::open(['url' => 'admin/news']) !!}
                 @include('includes.admin.newsform',['submitButtonText' => 'Opslaan'])
-            {!! Form::close() !!}
+                {!! Form::close() !!}
+            </div>
         </div>
     </div>
-</div>
 @stop
