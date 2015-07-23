@@ -9,7 +9,7 @@
 @stop
 
 @section('mjs')
-    {!! HTML::script('js/redactor.js') !!}
+    {!! HTML::script('js/redactor2.js') !!}
     {!! HTML::script('js/table.js') !!}
     {!! HTML::script('js/video.js') !!}
     <script type="text/javascript">
