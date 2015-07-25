@@ -40,9 +40,9 @@
                             <p>Een slug mag geen Hoofdletters, speciale tekens of spaties(gebruik -) bevatten dus
                                 Enqu&ecirc;te Invulling Clustercaf&eacute; word enquete-invulling-clustercafe. Ook moet een slug niet
                                 te lang of te kort zijn dus 3
-                                tot 5 woorden. Als je de slug leeg laat dan word hij voor je gemaakt uit de titel en
-                                worden spaties etc er allemaal voor je uitgehaalt.
-                                Meestal hoef je de slug dus niet in vullen maar als je titel erg lang of kort is dan is
+                                tot 5 woorden. De slug wordt voor je gemaakt uit de titel en
+                                spaties etc worden er allemaal voor je uitgehaalt.
+                                Meestal hoef je de slug dus niet aan te passen maar als je titel erg lang of kort is dan is
                                 het aan te raden dit wel te doen om de URLs mooi duidelijk en consistent te houden</p>
                         </div>
                         <div class="tab-pane fade" id="profile">
