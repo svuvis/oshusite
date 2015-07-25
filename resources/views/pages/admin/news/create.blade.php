@@ -23,6 +23,14 @@
             });
         });
     </script>
+    {!! HTML::script('js/speakingurl.min.js') !!}
+    {!! HTML::script('js/slugify.min.js') !!}
+    <script>
+        jQuery(function($) {
+            $.slugify("Ätschi Bätschi"); // "aetschi-baetschi"
+            $('#slug').slugify('#title'); // Type as you slug
+        });
+    </script>
 @stop
 
 

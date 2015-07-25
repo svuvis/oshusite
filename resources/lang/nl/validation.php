@@ -98,6 +98,12 @@ return [
         'body' => [
             'required' => 'Nieuwsbericht is verplicht.',
         ],
+        'slug' => [
+            'required' => 'Slug is verplicht.',
+            'min' => 'Slug moet minimaal :min karakters zijn.',
+            'max' => 'Slug moet minder dan :max karakters zijn.',
+            'unique' => "Slug is al in gebruik.",
+        ],
     ],
 
     /*

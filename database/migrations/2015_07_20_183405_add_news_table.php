@@ -14,6 +14,7 @@ class AddNewsTable extends Migration
     {
         Schema::create('oshu_news', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('slug')->unique();
             $table->string('title');
             $table->text('body');
             $table->timestamps();

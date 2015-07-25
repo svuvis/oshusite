@@ -20,9 +20,10 @@
 @stop
 
 @section('js')
-    <!-- Morris Charts JavaScript -->
-{{--    {!! HTML::script('js/raphael-min.js') !!}--}}
-{{--    {!! HTML::script('js/morris.min.js') !!}
-    {!! HTML::script('js/morris-data.js') !!}--}}
+    <script>
+        $(document).ready(function(){
+            $("[rel=tooltip]").tooltip({ placement: 'right'});
+        });
+    </script>
     @yield('mjs')
 @stop

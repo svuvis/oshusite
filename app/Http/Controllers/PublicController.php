@@ -29,16 +29,16 @@ class PublicController extends Controller
         $posts = News::all()->count();
         $pages = ceil($posts / 3);
         if($page > $pages){
-            return redirect('nieuws/1');
+            return redirect('nieuws/pagina-1');
         }
         $news = News::latest()->skip(($page - 1) * 3)->take(3)->get();
         return view('pages.public.news')->with(['news' => $news,'page' => $page, 'pages' => $pages]);
     }
 
-    public function article($id)
+    public function article($slug)
     {
         Carbon::setLocale('nl');
-        $article = News::find($id);
+        $article = News::where('slug',$slug)->first();
         return view('pages.public.article')->with('article',$article);
     }
 

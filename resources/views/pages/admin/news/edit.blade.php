@@ -25,6 +25,14 @@
             });
         });
     </script>
+    {!! HTML::script('js/speakingurl.min.js') !!}
+    {!! HTML::script('js/slugify.min.js') !!}
+    <script>
+        jQuery(function($) {
+            $.slugify("Ätschi Bätschi"); // "aetschi-baetschi"
+            $('#slug').slugify('#title'); // Type as you slug
+        });
+    </script>
 @stop
 
 @section('mcontent')
@@ -37,6 +45,7 @@
         <div class="row">
             <div class="col-lg-6">
                 {!! Form::model($news, ['method' => 'PATCH', 'action' => ['NewsController@update', $news->id]]) !!}
+                {!! Form::hidden('id', $news->id) !!}
                     @include('includes.admin.newsform',['submitButtonText' => 'Aanpassen'])
                 {!! Form::close() !!}
             </div>

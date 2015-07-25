@@ -352,3 +352,12 @@ table.dataTable thead .sorting:after {
 .panel-yellow a:hover {
     color: #df8a13;
 }
+.form-group.required .control-label:after {
+    color: #d00;
+    position: absolute;
+    margin-left: 4px;
+    font-family: 'FontAwesome', sans-serif;
+    font-weight: normal;
+    font-size: 10px;
+    content: "\f069";
+}

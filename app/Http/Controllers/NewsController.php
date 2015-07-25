@@ -38,19 +38,9 @@ class NewsController extends Controller
      */
     public function store(NewsRequest $request)
     {
+        $request->merge(array('slug' => \Str::slug($request->slug)));
         News::create($request->all());
         return redirect('admin/news');
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return Response
-     */
-    public function show($id)
-    {
-        //
     }
 
     /**
@@ -75,8 +65,8 @@ class NewsController extends Controller
     public function update(NewsRequest $request, $id)
     {
         $news = News::findOrFail($id);
+        $request->merge(array('slug' => \Str::slug($request->slug)));
         $news->update($request->all());
-
         return redirect('admin/news');
     }
 
