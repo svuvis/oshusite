@@ -13,15 +13,20 @@
     {!! HTML::script('js/table.js') !!}
     {!! HTML::script('js/video.js') !!}
     <script type="text/javascript">
-        $(function()
-        {
+        $(function () {
             $('#body').redactor({
                 focus: true,
                 imageUpload: '{{ url() }}/image/upload?_token=' + '{{ csrf_token() }}',
-                imageManagerJson: '{{ url() }}/image.php',
                 plugins: ['table', 'video'],
                 maxHeight: 300,
-                minHeight: 300
+                minHeight: 300,
+                imageUploadErrorCallback: function(json)
+                {
+                    $.each(json.error.file, function(file, item)
+                    {
+                        toastr.error(item);
+                    });
+                }
             });
         });
     </script>
@@ -29,7 +34,6 @@
     {!! HTML::script('js/slugify.min.js') !!}
     <script>
         jQuery(function($) {
-            $.slugify("Ätschi Bätschi"); // "aetschi-baetschi"
             $('#slug').slugify('#title'); // Type as you slug
         });
     </script>

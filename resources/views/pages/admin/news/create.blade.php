@@ -20,6 +20,13 @@
                 plugins: ['table', 'video'],
                 maxHeight: 300,
                 minHeight: 300,
+                imageUploadErrorCallback: function(json)
+                {
+                    $.each(json.error.file, function(file, item)
+                    {
+                        toastr.error(item);
+                    });
+                }
             });
         });
     </script>
@@ -27,7 +34,6 @@
     {!! HTML::script('js/slugify.min.js') !!}
     <script>
         jQuery(function($) {
-            $.slugify("Ätschi Bätschi"); // "aetschi-baetschi"
             $('#slug').slugify('#title'); // Type as you slug
         });
     </script>

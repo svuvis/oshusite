@@ -147,6 +147,7 @@ return [
         Illuminate\Html\HtmlServiceProvider::class,
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
+        Laracasts\Flash\FlashServiceProvider::class,
 
     ],
 
@@ -199,6 +200,7 @@ return [
         'HTML'      => Illuminate\Html\HtmlFacade::class,
         'Image'     => Intervention\Image\Facades\Image::class,
         'Str'       => Illuminate\Support\Str::class,
+        'Flash'     => Laracasts\Flash\Flash::class,
     ],
 
 ];

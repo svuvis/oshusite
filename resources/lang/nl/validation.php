@@ -104,6 +104,11 @@ return [
             'max' => 'Slug moet minder dan :max karakters zijn.',
             'unique' => "Slug is al in gebruik.",
         ],
+        'file' => [
+            'required' => 'Bestand is verplicht.',
+            "mimes"          => "Bestand moet zijn van het bestandstype :values.",
+            'max' => 'Betand moet minder dan 10 MB zijn',
+        ],
     ],
 
     /*

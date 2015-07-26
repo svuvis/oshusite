@@ -38,8 +38,8 @@ class NewsController extends Controller
      */
     public function store(NewsRequest $request)
     {
-        $request->merge(array('slug' => \Str::slug($request->slug)));
         News::create($request->all());
+        \Flash::success('Nieuwsartikel gepubliceerd');
         return redirect('admin/news');
     }
 
@@ -65,8 +65,8 @@ class NewsController extends Controller
     public function update(NewsRequest $request, $id)
     {
         $news = News::findOrFail($id);
-        $request->merge(array('slug' => \Str::slug($request->slug)));
         $news->update($request->all());
+        \Flash::success('Nieuwsartikel aangepast');
         return redirect('admin/news');
     }
 
@@ -80,6 +80,7 @@ class NewsController extends Controller
     {
         $news = News::findOrFail($id);
         $news->delete();
+        \Flash::success('Nieuwsartikel verwijderd');
         return redirect('admin/news');
     }
 }

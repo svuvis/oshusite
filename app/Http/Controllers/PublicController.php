@@ -124,11 +124,6 @@ class PublicController extends Controller
 
     public function upload(Request $request)
     {
-        if(!$request->hasFile('file'))
-            return Response::json(['error' => 'No File Sent']);
-
-        if(!$request->file('file')->isValid())
-            return Response::json(['error' => 'File is not valid']);
 
         $file = $request->file('file');
 
@@ -137,8 +132,9 @@ class PublicController extends Controller
             ['file' => 'required|mimes:jpeg,jpg,png|max:10000']
         );
 
-        if($v->fails())
+        if($v->fails()) {
             return Response::json(['error' => $v->errors()]);
+        }
 
         //Use some method to generate your filename here. Here we are just using the ID of the image
         $filename = 'oshu'.uniqid('', true).'.'.$file->getClientOriginalExtension();
