@@ -12,7 +12,7 @@ class AddNewsTable extends Migration
      */
     public function up()
     {
-        Schema::create('oshu_news', function (Blueprint $table) {
+        Schema::create('news', function (Blueprint $table) {
             $table->increments('id');
             $table->string('slug')->unique();
             $table->string('title');
@@ -28,6 +28,6 @@ class AddNewsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('oshu_news');
+        Schema::drop('news');
     }
 }

@@ -23,11 +23,11 @@ class NewsRequest extends Request
     {
         if ($this->method() == 'PATCH')
         {
-            $slug_rule = 'required|min:3|max:255|unique:oshu_news,slug,'.$this->get('id');
+            $slug_rule = 'required|min:3|max:255|unique:news,slug,'.$this->get('id');
         }
         else
         {
-            $slug_rule = 'required|min:3|max:255|unique:oshu_news';
+            $slug_rule = 'required|min:3|max:255|unique:news';
         }
         return [
             'title' => 'required|min:3|max:90',
