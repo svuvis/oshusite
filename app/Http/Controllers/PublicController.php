@@ -146,7 +146,7 @@ class PublicController extends Controller
         Storage::disk('s3')->setVisibility('oshu/'.$filename, 'public');
 
         if($move){
-            return Response::json(['filelink'=>'http://d3ie1hv55ztzyy.cloudfront.net/'. $filename]);
+            return Response::json(['filelink'=>'http://cdn.oshu.nl/'. $filename]);
         }else{
             return Response::json(['error'=>true]);
         }

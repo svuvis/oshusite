@@ -26,7 +26,7 @@
                     {
                         toastr.error(item);
                     });
-                }
+                },
             });
         });
     </script>
