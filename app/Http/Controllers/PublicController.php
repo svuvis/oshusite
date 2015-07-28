@@ -1,7 +1,9 @@
 <?php namespace App\Http\Controllers;
 
 
+use App\BoardMember;
 use App\News;
+use App\Page;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Response;
@@ -20,7 +22,8 @@ class PublicController extends Controller
 
     public function oshu()
     {
-        return view('pages.public.oshu');
+        $page = Page::where('slug', 'oshu')->first();
+        return view('pages.public.oshu',compact('page'));
     }
 
     public function news($page)
@@ -44,7 +47,8 @@ class PublicController extends Controller
 
     public function bestuur()
     {
-        return view('pages.public.bestuur');
+        $members = BoardMember::all();
+        return view('pages.public.bestuur',compact('members'));
     }
 
     public function agenda()

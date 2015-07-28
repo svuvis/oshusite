@@ -109,6 +109,22 @@ return [
             "mimes"          => "Bestand moet zijn van het bestandstype :values.",
             'max' => 'Betand moet minder dan 10 MB zijn',
         ],
+        'name' => [
+            'required' => 'Naam is verplicht.',
+            'max' => 'Naam moet minder dan :max karakters zijn.',
+        ],
+        'function' => [
+            'required' => 'Functie is verplicht.',
+            'max' => 'Functie moet minder dan :max karakters zijn.',
+        ],
+        'description' => [
+            'required' => 'Beschrijving is verplicht.',
+            'max' => 'Beschrijving moet minder dan :max karakters zijn.',
+        ],
+        'picture' => [
+            'required' => 'Foto is verplicht.',
+            'max' => 'Foto moet minder dan :max karakters zijn.',
+        ],
     ],
 
     /*

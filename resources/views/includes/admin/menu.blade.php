@@ -25,10 +25,10 @@
                     <a href="#"><i class="fa fa-beer fa-fw"></i> Studieverenigingen</a>
                 </li>
                 <li>
-                    <a href="#"><i class="fa fa-question fa-fw"></i> Wat doet de OSHU</a>
+                    <a href="{{action('PagesController@edit')}}"><i class="fa fa-question fa-fw"></i> Wat doet de OSHU</a>
                 </li>
                 <li>
-                    <a href="#"><i class="fa fa-heart fa-fw"></i> OSHU Bestuur</a>
+                    <a href="{{action('BoardMembersController@index')}}"><i class="fa fa-heart fa-fw"></i> OSHU Bestuur</a>
                 </li>
             </ul>
         </div>
