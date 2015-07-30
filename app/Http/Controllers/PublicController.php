@@ -2,6 +2,7 @@
 
 
 use App\BoardMember;
+use App\Event;
 use App\News;
 use App\Page;
 use Carbon\Carbon;
@@ -53,7 +54,8 @@ class PublicController extends Controller
 
     public function agenda()
     {
-        return view('pages.public.agenda');
+        $events = Event::orderBy('endtime')->get();
+        return view('pages.public.agenda',compact('events'));
     }
 
     public function uvis()

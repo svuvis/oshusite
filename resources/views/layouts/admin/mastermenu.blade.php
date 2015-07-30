@@ -14,7 +14,7 @@
 @section('content')
     <div id="wrapper">
         @include('includes.admin.menu')
-        <div id="page-wrapper">
+        <div id="page-wrapper" style="min-height: 920px;">
             @yield('mcontent')
         </div>
     </div>

@@ -19,16 +19,16 @@
                     <a href="{{action('NewsController@index')}}" class="{{ set_active(['admin/news*']) }}"><i class="fa fa-newspaper-o fa-fw"></i> Nieuwsberichten</a>
                 </li>
                 <li>
-                    <a href="#"><i class="fa fa-calendar fa-fw"></i> Agenda</a>
+                    <a href="{{action('EventsController@index')}}" class="{{ set_active(['admin/events*']) }}"><i class="fa fa-calendar fa-fw"></i> Agenda</a>
                 </li>
                 <li>
                     <a href="#"><i class="fa fa-beer fa-fw"></i> Studieverenigingen</a>
                 </li>
                 <li>
-                    <a href="{{action('PagesController@edit')}}"><i class="fa fa-question fa-fw"></i> Wat doet de OSHU</a>
+                    <a href="{{action('PagesController@edit')}}" class="{{ set_active(['admin/pages*']) }}"><i class="fa fa-question fa-fw"></i> Wat doet de OSHU</a>
                 </li>
                 <li>
-                    <a href="{{action('BoardMembersController@index')}}"><i class="fa fa-heart fa-fw"></i> OSHU Bestuur</a>
+                    <a href="{{action('BoardMembersController@index')}}" class="{{ set_active(['admin/board_members*']) }}"><i class="fa fa-heart fa-fw"></i> OSHU Bestuur</a>
                 </li>
             </ul>
         </div>

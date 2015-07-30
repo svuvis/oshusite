@@ -48,4 +48,6 @@ Route::resource('admin/board_members','BoardMembersController');
 Route::post('admin/upload', 'AdminController@upload');
 Route::patch('admin/edit/upload', 'AdminController@upload');
 
+Route::resource('admin/events','EventsController');
+
 

@@ -13,6 +13,7 @@ return [
     |
     */
 
+    "future"         => ":attribute moet in de toekomst zijn",
     "accepted"       => ":attribute moet geaccepteerd zijn.",
     "active_url"     => ":attribute is geen geldige URL.",
     "after"          => ":attribute moet een datum na :date zijn.",
@@ -124,6 +125,18 @@ return [
         'picture' => [
             'required' => 'Foto is verplicht.',
             'max' => 'Foto moet minder dan :max karakters zijn.',
+        ],
+        'starttime' => [
+            'required' => 'Begintijd is verplicht.',
+            'future' => 'Begintijd moet in de toekomst zijn',
+        ],
+        'endtime' => [
+            'required' => 'Eindtijd is verplicht.',
+            'future' => 'Eindtijd moet in de toekomst zijn',
+        ],
+        'place' => [
+            'required' => 'Locatie is verplicht.',
+            'max' => 'Locatie moet minder dan :max karakters zijn.',
         ],
     ],
 
