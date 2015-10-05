@@ -25,7 +25,7 @@ class BoardMemberRequest extends Request
             'name' => 'required|max:25',
             'function' => 'required|max:20',
             'picture' => 'required',
-            'description' => 'required|max:675',
+            'description' => 'required|max:790',
         ];
     }
 }
