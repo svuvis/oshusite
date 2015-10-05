@@ -11,7 +11,7 @@
                 <div class="col-md-6">
                     <section style="margin-top: 40px;margin-bottom: 0 !important;">
                         <div class="panel panel-default  animated fadeInDown animation-delay-10" style="margin-bottom: 0">
-                            <div class="panel-body">
+                            <div class="panel-body" style="height:500px">
                                 <h3 class="section-title">{{ $member->name }}
                                     <small class="pull-right">{{ $member->function }}</small>
                                     <div class="clearfix"></div>
