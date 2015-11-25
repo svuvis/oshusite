@@ -11,17 +11,7 @@
 
     <title>@yield('title')</title>
 
-    <!-- Bootstrap Core CSS -->
-    {!! HTML::style('/css/bootstrap.min.css') !!}
-
-    <!-- MetisMenu CSS -->
-    {!! HTML::style('/css/metisMenu.min.css') !!}
-
-    <!-- Custom CSS -->
-    {!! HTML::style('/css/sb-admin-2.css') !!}
-
-    <!-- Custom Fonts -->
-    {!! HTML::style('/css/font-awesome.min.css') !!}
+    {!! HTML::style('css/admin-all.css') !!}
 
     @yield('css')
 
@@ -38,11 +28,7 @@
 
 @yield('content')
 
-<!-- jQuery -->
-{!! HTML::script('js/jquery.min.js') !!}
-
-<!-- Bootstrap Core JavaScript -->
-{!! HTML::script('js/bootstrap.min.js') !!}
+{!! HTML::script('js/admin-all.js') !!}
 
 @yield('js')
 

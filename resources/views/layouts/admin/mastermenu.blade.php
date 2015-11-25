@@ -1,12 +1,5 @@
 @extends('layouts.admin.master')
 
-@section('css')
-    {!! HTML::style('/css/timeline.css') !!}
-    {!! HTML::style('/css/morris.css') !!}
-    {!! HTML::style('/css/toastr.min.css') !!}
-    @yield('mcss')
-@stop
-
 @section('title')
     @yield('mtitle')
 @stop
@@ -21,7 +14,6 @@
 @stop
 
 @section('js')
-    {!! HTML::script('js/toastr.min.js') !!}
     @if(Session::has('flash_notification.message'))
         <script>
             @if(Session::get('flash_notification.level') == 'danger')

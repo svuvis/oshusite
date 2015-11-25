@@ -10,18 +10,9 @@
     <link rel="shortcut icon" href="{{ asset('/img/Custom/favicon.ico') }}" type="image/x-icon">
     <link rel="icon" href="{{ asset('/img/Custom/favicon.ico') }}" type="image/x-icon">
     <!-- CSS -->
-    {!! HTML::style('/css/bootstrap.min.css') !!}
-    {!! HTML::style('css/font-awesome.min.css') !!}
-    {!! HTML::style('css/animate.min.css') !!}
-    {!! HTML::style('css/lightbox.css') !!}
-    {!! HTML::style('css/syntax/shCore.css') !!}
-    {!! HTML::style('css/syntax/shThemeDefault.css') !!}
-    {!! HTML::style('css/style.css') !!}
-    {!! HTML::style('css/color-default.css') !!}
-    {!! HTML::style('css/width-full.css') !!}
-    {!! HTML::style('css/custom/style.css') !!}
-    @yield('css')
 
+    {!! HTML::style('css/all.css') !!}
+    @yield('css')
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -142,17 +133,7 @@
 
 
 <!-- Scripts -->
-{!! HTML::script('js/jquery.min.js') !!}
-{!! HTML::script('js/jquery.cookie.js') !!}
-{!! HTML::script('js/bootstrap.min.js') !!}
-{!! HTML::script('js/jquery.mixitup.min.js') !!}
-{!! HTML::script('js/lightbox-2.6.min.js') !!}
-{!! HTML::script('js/holder.js') !!}
-{!! HTML::script('js/app.js') !!}
-
-{!! HTML::script('js/syntax/shCore.js') !!}
-{!! HTML::script('js/syntax/shBrushXml.js') !!}
-{!! HTML::script('js/syntax/shBrushJScript.js') !!}
+{!! HTML::script('js/all.js') !!}
 
 <script type="text/javascript">
     SyntaxHighlighter.all()

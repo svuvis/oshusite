@@ -4,34 +4,6 @@
     OSHU - Wat doet de OSHU
 @stop
 
-@section('mcss')
-    {!! HTML::style('/css/redactor.css') !!}
-@stop
-
-@section('mjs')
-    {!! HTML::script('js/redactor2.js') !!}
-    {!! HTML::script('js/table.js') !!}
-    {!! HTML::script('js/video.js') !!}
-    <script type="text/javascript">
-        $(function () {
-            $('#body').redactor({
-                focus: true,
-                imageUpload: '{{ url() }}/image/upload?_token=' + '{{ csrf_token() }}',
-                plugins: ['table', 'video'],
-                maxHeight: 300,
-                minHeight: 300,
-                imageUploadErrorCallback: function(json)
-                {
-                    $.each(json.error.file, function(file, item)
-                    {
-                        toastr.error(item);
-                    });
-                }
-            });
-        });
-    </script>
-@stop
-
 @section('mcontent')
     <div class="container-fluid">
         <div class="row">
@@ -59,4 +31,25 @@
             </div>
         </div>
     </div>
+@stop
+
+@section('mjs')
+    <script type="text/javascript">
+        $(function () {
+            $('#body').redactor({
+                focus: true,
+                imageUpload: '{{ url() }}/image/upload?_token=' + '{{ csrf_token() }}',
+                plugins: ['table', 'video'],
+                maxHeight: 300,
+                minHeight: 300,
+                imageUploadErrorCallback: function(json)
+                {
+                    $.each(json.error.file, function(file, item)
+                    {
+                        toastr.error(item);
+                    });
+                }
+            });
+        });
+    </script>
 @stop

@@ -2,16 +2,27 @@
 
 @section('mtitle')
     OSHU - Nieuwsberichten
-@stop
+@endsection
 
-@section('mcss')
-    {!! HTML::style('/css/redactor.css') !!}
-@stop
+@section('mcontent')
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Nieuwsbericht Aanpassen</h1>=
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                {!! Form::model($news, ['method' => 'PATCH', 'action' => ['NewsController@update', $news->id]]) !!}
+                {!! Form::hidden('id', $news->id) !!}
+                    @include('includes.admin.newsform',['submitButtonText' => 'Aanpassen'])
+                {!! Form::close() !!}
+            </div>
+        </div>
+    </div>
+@endsection
 
 @section('mjs')
-    {!! HTML::script('js/redactor2.js') !!}
-    {!! HTML::script('js/table.js') !!}
-    {!! HTML::script('js/video.js') !!}
     <script type="text/javascript">
         $(function () {
             $('#body').redactor({
@@ -30,29 +41,9 @@
             });
         });
     </script>
-    {!! HTML::script('js/speakingurl.min.js') !!}
-    {!! HTML::script('js/slugify.min.js') !!}
     <script>
         jQuery(function($) {
             $('#slug').slugify('#title'); // Type as you slug
         });
     </script>
-@stop
-
-@section('mcontent')
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-12">
-                <h1 class="page-header">Nieuwsbericht Aanpassen</h1>=
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-6">
-                {!! Form::model($news, ['method' => 'PATCH', 'action' => ['NewsController@update', $news->id]]) !!}
-                {!! Form::hidden('id', $news->id) !!}
-                    @include('includes.admin.newsform',['submitButtonText' => 'Aanpassen'])
-                {!! Form::close() !!}
-            </div>
-        </div>
-    </div>
-@stop
+@endsection

@@ -4,11 +4,6 @@
     OSHU - Agenda
 @stop
 
-@section('mcss')
-    {!! HTML::style('/css/redactor.css') !!}
-    {!! HTML::style('/css/bootstrap-datetimepicker.min.css') !!}
-@stop
-
 @section('mcontent')
     <div class="container-fluid">
         <div class="row">
@@ -27,9 +22,6 @@
 @stop
 
 @section('mjs')
-    {!! HTML::script('js/redactor2.js') !!}
-    {!! HTML::script('js/table.js') !!}
-    {!! HTML::script('js/video.js') !!}
     <script type="text/javascript">
         $(function () {
             $('#body').redactor({
@@ -48,9 +40,6 @@
             });
         });
     </script>
-    {!! HTML::script('js/moment.min.js') !!}
-    {!! HTML::script('js/nl.js') !!}
-    {!! HTML::script('js/bootstrap-datetimepicker.min.js') !!}
     <script type="text/javascript">
         $(function () {
             $('#datetimepicker1').datetimepicker({

@@ -5,8 +5,6 @@ namespace App\Http\Controllers;
 use App\Http\Requests;
 use App\Http\Requests\PagesRequest;
 use App\Page;
-use Illuminate\Http\Request;
-use Illuminate\Http\Response;
 
 class PagesController extends Controller
 {
@@ -15,25 +13,22 @@ class PagesController extends Controller
         $this->middleware('auth');
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int $id
-     * @return Response
-     */
     public function edit()
     {
+        $page = Page::where('slug', 'oshu')->first();
+        if($page == null){
+            $new = new Page();
+            $new->slug = 'oshu';
+            $new->nav_title = 'OSHU';
+            $new->title = 'test';
+            $new->body = 'test';
+            $new->save();
+        }
         $page = Page::where('slug', 'oshu')->first();
         return view('pages.admin.pages.edit', compact('page'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  Request $request
-     * @param  int $id
-     * @return Response
-     */
+
     public function update(PagesRequest $request, $id)
     {
         $page = Page::findOrFail($id);

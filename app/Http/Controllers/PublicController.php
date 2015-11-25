@@ -24,6 +24,15 @@ class PublicController extends Controller
     public function oshu()
     {
         $page = Page::where('slug', 'oshu')->first();
+        if($page == null){
+            $new = new Page();
+            $new->slug = 'oshu';
+            $new->nav_title = 'OSHU';
+            $new->title = 'test';
+            $new->body = 'test';
+            $new->save();
+        }
+        $page = Page::where('slug', 'oshu')->first();
         return view('pages.public.oshu',compact('page'));
     }
 

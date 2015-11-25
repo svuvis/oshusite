@@ -22,9 +22,6 @@
 @stop
 
 @section('mjs')
-    {!! HTML::script('js/jquery.ui.widget.js') !!}
-    {!! HTML::script('js/jquery.iframe-transport.js') !!}
-    {!! HTML::script('js/jquery.fileupload.js') !!}
     <script>
         var myApp = myApp || (function () {
                     var pleaseWaitDiv = $('<div class="modal fade" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-hidden="true" style="padding-top:15%; overflow-y:visible;">' +
