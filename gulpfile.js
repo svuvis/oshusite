@@ -66,4 +66,6 @@ elixir(function(mix) {
 
     mix.copy('resources/assets/fonts', 'public/fonts');
     mix.copy('resources/assets/img', 'public/img');
+    mix.copy('resources/assets/js/html5shiv.js', 'public/js');
+    mix.copy('resources/assets/js/respond.min.js', 'public/js');
 });
