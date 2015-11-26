@@ -27,7 +27,7 @@ class PublicController extends Controller
         if($page == null){
             $new = new Page();
             $new->slug = 'oshu';
-            $new->nav_title = 'OSHU';
+            $new->nav_title = 'OSHU - Wat doen we?';
             $new->title = 'test';
             $new->body = 'test';
             $new->save();

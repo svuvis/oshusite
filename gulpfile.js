@@ -44,17 +44,14 @@ elixir(function(mix) {
         'jquery.mixitup.min.js',
         'lightbox-2.6.min.js',
         'holder.js',
-        'app.js',
-        'syntax/shCore.js',
-        'syntax/shBrushXml.js',
-        'syntax/shBrushJScript.js'
+        'app.js'
     ],'public/js/all.js');
 
     mix.scripts([
         'jquery.min.js',
         'bootstrap.min.js',
         'toastr.min.js',
-        'redactor2.js',
+        'redactor.js',
         'table.js',
         'video.js',
         'speakingurl.min.js',
