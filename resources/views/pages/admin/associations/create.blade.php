@@ -1,26 +1,25 @@
 @extends('layouts.admin.mastermenu')
 
 @section('mtitle')
-    OSHU - Nieuwsberichten
-@endsection
+    OSHU - Verenigingen
+@stop
 
 @section('mcontent')
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">Nieuwsbericht Aanpassen</h1>
+                <h1 class="page-header">Vereniging Toevoegen</h1>
             </div>
         </div>
         <div class="row">
             <div class="col-lg-6">
-                {!! Form::model($news, ['method' => 'PATCH', 'action' => ['NewsController@update', $news->id]]) !!}
-                {!! Form::hidden('id', $news->id) !!}
-                    @include('includes.admin.newsform',['submitButtonText' => 'Aanpassen'])
+                {!! Form::open(['action' => 'AssociationController@store']) !!}
+                @include('includes.admin.associationsform',['submitButtonText' => 'Opslaan'])
                 {!! Form::close() !!}
             </div>
         </div>
     </div>
-@endsection
+@stop
 
 @section('mjs')
     <script type="text/javascript">
@@ -37,7 +36,7 @@
                     {
                         toastr.error(item);
                     });
-                }
+                },
             });
         });
     </script>
@@ -46,4 +45,4 @@
             $('#slug').slugify('#title'); // Type as you slug
         });
     </script>
-@endsection
+@stop

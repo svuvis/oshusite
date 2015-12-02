@@ -22,7 +22,10 @@
                     <a href="{{action('EventsController@index')}}" class="{{ set_active(['admin/events*']) }}"><i class="fa fa-calendar fa-fw"></i> Agenda</a>
                 </li>
                 <li>
-                    <a href="#"><i class="fa fa-beer fa-fw"></i> Studieverenigingen</a>
+                    <a href="{{action('FacultyController@index')}}" class="{{ set_active(['admin/faculties*']) }}"><i class="fa fa-university fa-fw"></i> Faculteiten</a>
+                </li>
+                <li>
+                    <a href="{{action('AssociationController@index')}}" class="{{ set_active(['admin/associations*']) }}"><i class="fa fa-beer fa-fw"></i> Studieverenigingen</a>
                 </li>
                 <li>
                     <a href="{{action('PagesController@edit')}}" class="{{ set_active(['admin/pages*']) }}"><i class="fa fa-question fa-fw"></i> Wat doet de OSHU</a>

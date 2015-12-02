@@ -1,21 +1,21 @@
 @extends('layouts.admin.mastermenu')
 
 @section('mtitle')
-    OSHU - Nieuwsberichten
+    OSHU - Verenigingen
 @endsection
 
 @section('mcontent')
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">Nieuwsbericht Aanpassen</h1>
+                <h1 class="page-header">Vereniging Aanpassen</h1>
             </div>
         </div>
         <div class="row">
             <div class="col-lg-6">
-                {!! Form::model($news, ['method' => 'PATCH', 'action' => ['NewsController@update', $news->id]]) !!}
-                {!! Form::hidden('id', $news->id) !!}
-                    @include('includes.admin.newsform',['submitButtonText' => 'Aanpassen'])
+                {!! Form::model($association, ['method' => 'PATCH', 'action' => ['AssociationController@update', $association->id]]) !!}
+                {!! Form::hidden('id', $association->id) !!}
+                    @include('includes.admin.associationsform',['submitButtonText' => 'Aanpassen'])
                 {!! Form::close() !!}
             </div>
         </div>

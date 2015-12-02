@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Faculty;
 use Carbon\Carbon;
 use Illuminate\Support\ServiceProvider;
 use Validator;
@@ -17,6 +18,9 @@ class AppServiceProvider extends ServiceProvider
     {
         Validator::extend('future', function($attribute, $value, $parameters) {
             return Carbon::parse($value)->isFuture();
+        });
+        view()->composer('includes.public.svmenu', function($view){
+            $view->with('faculties', Faculty::all());
         });
     }
 
