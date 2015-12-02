@@ -23,11 +23,11 @@ class FacultiesRequest extends Request
     {
         if ($this->method() == 'PATCH')
         {
-            $slug_rule = 'required|min:3|max:50|unique:faculties,slug,'.$this->get('id');
+            $slug_rule = 'required|min:2|max:50|unique:faculties,slug,'.$this->get('id');
         }
         else
         {
-            $slug_rule = 'required|min:3|max:50|unique:faculties';
+            $slug_rule = 'required|min:2|max:50|unique:faculties';
         }
         return [
             'title' => 'required|min:3|max:45',

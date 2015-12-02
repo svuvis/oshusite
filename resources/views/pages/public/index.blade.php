@@ -41,7 +41,7 @@
                     <div class="row" style="height: 400px">
                         <div class="col-xs-12 carousel-img-wrap">
                             {!! HTML::image('img/Custom/slide3.png','Image',array('class' => 'img-responsive animated bounceInUp', 'style' => 'width:452px; margin-left: auto; margin-right: auto; margin-top: 10px; margin-bottom: 10px')) !!}
-                            <p class="animated fadeInDownBig slidertx" >Trainig Conflicthantering</p>
+                            <p class="animated fadeInDownBig slidertx" >Training Conflicthantering</p>
                         </div>
                     </div>
                 </div>
@@ -62,7 +62,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8">
-                <h2 class="section-title">Laatse Nieuws</h2>
+                <h2 class="section-title">Laatste Nieuws</h2>
                 @if(count($news) != 0)
                 @foreach($news as $new)
                 <div class="panel panel-primary">
