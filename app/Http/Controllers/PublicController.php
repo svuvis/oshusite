@@ -4,6 +4,7 @@
 use App\BoardMember;
 use App\Event;
 use App\News;
+use App\Notule;
 use App\Page;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -67,75 +68,12 @@ class PublicController extends Controller
         return view('pages.public.agenda',compact('events'));
     }
 
-    public function uvis()
+    public function notulen()
     {
-        return view('pages.public.studieverenigingen.fnt.uvis');
+        $notulen = Notule::all()->sortBy('date');
+        return view('pages.public.notulen',compact('notulen'));
     }
 
-    public function uranymus()
-    {
-        return view('pages.public.studieverenigingen.fnt.v-v-s-uranymus');
-    }
-
-    public function cabo()
-    {
-        return view('pages.public.studieverenigingen.fnt.cabo-bianci');
-    }
-
-    public function utv()
-    {
-        return view('pages.public.studieverenigingen.fnt.u-t-v');
-    }
-
-    public function ingenium()
-    {
-        return view('pages.public.studieverenigingen.fnt.sv-ingenium');
-    }
-
-    public function paramedus()
-    {
-        return view('pages.public.studieverenigingen.fg.s-v-paramedus');
-    }
-
-    public function so2s()
-    {
-        return view('pages.public.studieverenigingen.fg.so2s');
-    }
-
-    public function lef()
-    {
-        return view('pages.public.studieverenigingen.fcj.sv-lef');
-    }
-
-    public function vox()
-    {
-        return view('pages.public.studieverenigingen.fcj.vox');
-    }
-
-    public function mad()
-    {
-        return view('pages.public.studieverenigingen.fcj.mad');
-    }
-
-    public function codex()
-    {
-        return view('pages.public.studieverenigingen.fmr.codex');
-    }
-
-    public function haerem()
-    {
-        return view('pages.public.studieverenigingen.fmr.haerem');
-    }
-
-    public function vesta()
-    {
-        return view('pages.public.studieverenigingen.fmr.vesta');
-    }
-
-    public function forum()
-    {
-        return view('pages.public.studieverenigingen.fem.forum');
-    }
 
     public function upload(Request $request)
     {

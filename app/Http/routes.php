@@ -10,6 +10,7 @@ Route::get('/nieuws/pagina-{page}', 'PublicController@news')->where('page', '^0*
 Route::get('/nieuws/artikel/{slug}', 'PublicController@article');
 Route::get('/oshu', 'PublicController@oshu');
 Route::get('/bestuur', 'PublicController@bestuur');
+Route::get('/notulen', 'PublicController@notulen');
 Route::get('/agenda', 'PublicController@agenda');
 Route::get('/studieverenigingen/{faculty}/{association}', 'AssociationController@show');
 Route::post('image/upload', 'PublicController@upload');
@@ -32,5 +33,6 @@ Route::resource('admin/faculties','FacultyController');
 Route::resource('admin/associations','AssociationController');
 Route::resource('admin/board_members','BoardMembersController');
 Route::resource('admin/events','EventsController');
+Route::resource('admin/notulen','NotulenController');
 
 

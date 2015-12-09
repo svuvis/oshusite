@@ -17,7 +17,7 @@
                                 <h3 class="post-title"><a href="{{action('PublicController@article', [$new->slug])}}" class="transicion">{{ $new->title }}</a></h3>
                                 <div class="row">
                                     <div class="col-md-12">
-                                        {!! Str::words($new->body, 50, '...') !!}
+                                        {!! Str::words(strip_tags($new->body), 50, '...') !!}
                                     </div>
                                 </div>
                             </div>

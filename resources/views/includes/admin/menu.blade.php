@@ -22,6 +22,9 @@
                     <a href="{{action('EventsController@index')}}" class="{{ set_active(['admin/events*']) }}"><i class="fa fa-calendar fa-fw"></i> Agenda</a>
                 </li>
                 <li>
+                    <a href="{{action('NotulenController@index')}}" class="{{ set_active(['admin/notulen*']) }}"><i class="fa fa-pencil fa-fw"></i> Notulen</a>
+                </li>
+                <li>
                     <a href="{{action('FacultyController@index')}}" class="{{ set_active(['admin/faculties*']) }}"><i class="fa fa-university fa-fw"></i> Faculteiten</a>
                 </li>
                 <li>

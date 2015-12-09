@@ -77,6 +77,9 @@
                     <li class="dropdown {{ set_active(['agenda']) }}">
                         {!! HTML::link('/agenda', 'Agenda', ['class'=>'dropdown-toggle']) !!}
                     </li> <!-- dropdown -->
+                    <li class="dropdown {{ set_active(['notulen']) }}">
+                        {!! HTML::link('/notulen', 'Notulen', ['class'=>'dropdown-toggle']) !!}
+                    </li> <!-- dropdown -->
                 </ul> <!-- nav nabvar-nav -->
 
                 <ul class="nav navbar-nav navbar-right">
