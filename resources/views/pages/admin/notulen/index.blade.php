@@ -30,8 +30,6 @@
                                         {!! Form::model($notule, ['method' => 'DELETE', 'action' => ['NotulenController@destroy', $notule->id], 'style' => 'float: right']) !!}
                                         {!! Form::submit('Verwijderen', ['class' => 'btn btn-danger', 'style' => 'float: right']) !!}
                                         {!! Form::close() !!}
-                                        <a href="{{action('NotulenController@edit',$notule->id)}}" class="btn btn-warning"
-                                           style="float: right; margin-right: 15px;color: white">Aanpassen</a>
                                     </h4>
                                 </div>
                                 <div id="collapse{{$notule->id}}" class="panel-collapse collapse">
