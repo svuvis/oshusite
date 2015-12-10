@@ -12,7 +12,7 @@
         @if(count($events) != 0)
             <ul class="timeline">
                 @foreach($events as $key=>$event)
-                <li @unless(($key+2) % 2 == 0)class="timeline-inverted"@endunless>
+                <li @unless(($key+2) % 2 == 0) class="timeline-inverted"@endunless>
                     <div class="timeline-badge"><i class="fa fa-calendar"></i></div>
                     <div class="timeline-panel">
                         <div class="timeline-heading">

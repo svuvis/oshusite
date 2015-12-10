@@ -13,7 +13,6 @@
     <div class="form-group required @if($errors->has('description')) has-error @endif">
         {!! Form::label('description','Beschrijving',['class' => 'control-label']) !!}
         {!! Form::textarea('description', null, ['class' => 'form-control', 'rows' => '8', 'value' => Input::old('description')]) !!}
-        <p class="help-block">Schrijf AUB afkortingen zonder punten dus UTV ipv U.T.V.!</p>
         @if ($errors->has('description')) <p class="help-block">{{ $errors->first('description') }}</p> @endif
     </div>
     <div class="form-group">
@@ -24,11 +23,10 @@
     <div class="col-lg-12 text-center">
         <div class="form-group required">
             {!! Form::label('picture','Foto',['class' => 'control-label']) !!}
-            <div>Word geschaald naar 192x232</div>
             <div>
                 {!! Form::hidden('picture', null, ['class' => 'form-control', 'value' => Input::old('description')]) !!}
                 <img id="img-thumb" class="user size-lg img-thumbnail"
-                     style="height: 232px;width: 192px;@if($errors->has('picture'))border-color: #a94442;@endif"
+                     style="height: 200px;width: 200px;@if($errors->has('picture'))border-color: #a94442;@endif"
                      src="{{ isset($member) ? $member->picture : 'http://cdn.oshu.nl/oshu55b6ea638cdc65.62184446.png' }}">
                 @if ($errors->has('picture')) <p class="help-block"
                                                  style="color: #a94442;">{{ $errors->first('picture') }}</p> @endif
