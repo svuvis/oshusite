@@ -26,7 +26,7 @@
             <div>
                 {!! Form::hidden('picture', null, ['class' => 'form-control', 'value' => Input::old('description')]) !!}
                 <img id="img-thumb" class="user size-lg img-thumbnail"
-                     style="height: 200px;width: 200px;@if($errors->has('picture'))border-color: #a94442;@endif"
+                     style="height: 175px;width: 175px;@if($errors->has('picture'))border-color: #a94442;@endif"
                      src="{{ isset($member) ? $member->picture : 'http://cdn.oshu.nl/oshu55b6ea638cdc65.62184446.png' }}">
                 @if ($errors->has('picture')) <p class="help-block"
                                                  style="color: #a94442;">{{ $errors->first('picture') }}</p> @endif

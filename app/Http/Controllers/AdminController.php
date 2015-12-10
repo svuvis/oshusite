@@ -39,7 +39,7 @@ class AdminController extends Controller
 
         //Push file to S3
         \Tinify\setKey(\Config::get('services.tinify.key'));
-        $image = \Tinify\fromBuffer(file_get_contents($file))->resize(array('method' => 'cover','width' => 200,'height' => 200))->toBuffer();
+        $image = \Tinify\fromBuffer(file_get_contents($file))->resize(array('method' => 'cover','width' => 175,'height' => 175))->toBuffer();
         $move = Storage::disk('s3')->put('oshu/' . $filename, $image);
         Storage::disk('s3')->setVisibility('oshu/'.$filename, 'public');
 
