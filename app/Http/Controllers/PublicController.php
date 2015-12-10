@@ -3,6 +3,7 @@
 
 use App\BoardMember;
 use App\Event;
+use App\Example;
 use App\News;
 use App\Notule;
 use App\Page;
@@ -34,7 +35,8 @@ class PublicController extends Controller
             $new->save();
         }
         $page = Page::where('slug', 'oshu')->first();
-        return view('pages.public.oshu',compact('page'));
+        $examples =  Example::all();
+        return view('pages.public.oshu',compact('page','examples'));
     }
 
     public function news($page)

@@ -97,7 +97,7 @@ return [
             'max' => 'Titel moet minder dan :max karakters zijn.',
         ],
         'body' => [
-            'required' => 'Nieuwsbericht is verplicht.',
+            'required' => 'Inhoud is verplicht.',
         ],
         'slug' => [
             'required' => 'Slug is verplicht.',

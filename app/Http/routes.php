@@ -34,5 +34,6 @@ Route::resource('admin/associations','AssociationController');
 Route::resource('admin/board_members','BoardMembersController');
 Route::resource('admin/events','EventsController');
 Route::resource('admin/notulen','NotulenController');
+Route::resource('admin/examples','ExamplesController');
 
 

@@ -36,6 +36,9 @@
                 <li>
                     <a href="{{action('BoardMembersController@index')}}" class="{{ set_active(['admin/board_members*']) }}"><i class="fa fa-heart fa-fw"></i> OSHU Bestuur</a>
                 </li>
+                <li>
+                    <a href="{{action('ExamplesController@index')}}" class="{{ set_active(['admin/examples*']) }}"><i class="fa fa-quote-left fa-fw"></i> Voorbeelden</a>
+                </li>
             </ul>
         </div>
         <!-- /.sidebar-collapse -->
