@@ -67,7 +67,13 @@ class PublicController extends Controller
     public function agenda()
     {
         $events = Event::orderBy('endtime')->get();
-        return view('pages.public.agenda',compact('events'));
+        $pastevents = $events->filter(function ($item){
+            return $item->starttime->isPast();
+        });
+        $futureevents = $events->filter(function ($item){
+            return $item->starttime->isFuture();
+        });
+        return view('pages.public.agenda',compact('pastevents','futureevents','events'));
     }
 
     public function notulen()

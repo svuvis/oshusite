@@ -25,8 +25,8 @@ class EventsRequest extends Request
     {
         return [
             'title' => 'required|max:50',
-            'starttime' => 'required|date|future',
-            'endtime' => 'required|date|future',
+            'starttime' => 'required|date',
+            'endtime' => 'required|date',
             'place' => 'required|max:45',
             'body' => 'required',
         ];
