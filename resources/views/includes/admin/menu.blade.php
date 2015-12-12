@@ -39,6 +39,9 @@
                 <li>
                     <a href="{{action('ExamplesController@index')}}" class="{{ set_active(['admin/examples*']) }}"><i class="fa fa-quote-left fa-fw"></i> Voorbeelden</a>
                 </li>
+                <li>
+                    <a href="{{action('SlidersController@index')}}" class="{{ set_active(['admin/sliders*']) }}"><i class="fa fa-picture-o fa-fw"></i> Sliders Voorpagina</a>
+                </li>
             </ul>
         </div>
         <!-- /.sidebar-collapse -->

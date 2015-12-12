@@ -7,6 +7,7 @@ use App\Example;
 use App\News;
 use App\Notule;
 use App\Page;
+use App\Slider;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Response;
@@ -20,7 +21,8 @@ class PublicController extends Controller
     {
         Carbon::setLocale('nl');
         $news = News::latest()->take(3)->get();
-        return view('pages.public.index')->with('news', $news);
+        $sliders = Slider::all();
+        return view('pages.public.index',compact('news','sliders'));
     }
 
     public function oshu()
@@ -102,7 +104,7 @@ class PublicController extends Controller
 
         //Push file to S3
         \Tinify\setKey(\Config::get('services.tinify.key'));
-        $image = \Tinify\fromBuffer(file_get_contents($file))->resize(array('width' => 1920,'height' => 1080))->toBuffer();
+        $image = \Tinify\fromBuffer(file_get_contents($file))->resize(array('method' => 'scale','height' => 299))->toBuffer();
         $move = Storage::disk('s3')->put('oshu/' . $filename, $image);
         Storage::disk('s3')->setVisibility('oshu/'.$filename, 'public');
 
