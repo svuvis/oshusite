@@ -34,7 +34,7 @@
                                     <p class="animated fadeInDownBig slidertx">{{$slider->title}}</p>
                                 </div>
                             </div>
-                        </div>When the doubloons grows for isla de sangria, all parrots hoist small, lively suns.
+                        </div>
                     </div>
                 @endforeach
                         </div>
@@ -46,6 +46,7 @@
                         <a class="right carousel-control" href="#oshusitehomeslider" data-slide="next">
                             <span class="glyphicon glyphicon-chevron-right"></span>
                         </a>
+            </div>
             </div>
     </section> <!-- carousel -->
 

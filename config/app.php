@@ -148,6 +148,7 @@ return [
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
         Laracasts\Flash\FlashServiceProvider::class,
+        BackupManager\Laravel\Laravel5ServiceProvider::class,
 
     ],
 
