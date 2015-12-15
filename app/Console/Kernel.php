@@ -30,7 +30,7 @@ class Kernel extends ConsoleKernel
         $date = Carbon::now()->toW3cString();
         $environment = env('APP_ENV');
         $schedule->command(
-            "db:backup --database=mysql --destination=s3 --destinationPath=/{$environment}/projectname_{$environment}_{$date} --compression=gzip"
+            "db:backup --database=mysql --destination=s3 --destinationPath=/{$environment}/oshu_{$environment}_{$date} --compression=gzip"
         )->twiceDaily(13,21);
     }
 }
