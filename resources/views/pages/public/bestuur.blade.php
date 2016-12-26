@@ -8,7 +8,7 @@
     <div class="container">
         <div class="row" style="margin-top: 20px">
             <div class="col-xs-12">
-                <h1 class="hl text-center top-zero">Het Bestuur van 2015-2016</h1>
+                <h1 class="hl text-center top-zero">Het Bestuur van 2016-2017</h1>
                 <br/>
             </div>
         </div>
