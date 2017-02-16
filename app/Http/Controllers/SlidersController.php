@@ -46,12 +46,11 @@ class SlidersController extends Controller
 
         \Tinify\setKey(\Config::get('services.tinify.key'));
         $image = \Tinify\fromBuffer(file_get_contents($file))->resize(array('method' => 'scale','height' => 299))->toBuffer();
-        Storage::disk('s3')->put('oshu/' . $filename, $image);
-        Storage::disk('s3')->setVisibility('oshu/'.$filename, 'public');
+        Storage::disk('local')->put('media/' . $filename, $image);
 
         $slider = new Slider();
         $slider->title = $request->title;
-        $slider->picture = 'http://cdn.oshu.nl/'.$filename;
+        $slider->picture = '/media/'.$filename;
         $slider->save();
 
 

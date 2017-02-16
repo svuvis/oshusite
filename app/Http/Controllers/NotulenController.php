@@ -49,12 +49,11 @@ class NotulenController extends Controller
 
         $filename = 'oshu'.$request->date.'-'.uniqid('', true).'.'.$file->getClientOriginalExtension();
 
-        Storage::disk('s3')->put('oshu/' . $filename, file_get_contents($file));
-        Storage::disk('s3')->setVisibility('oshu/'.$filename, 'public');
+        Storage::disk('local')->put('media/' . $filename, file_get_contents($file));
 
         $notule = new Notule();
         $notule->date = $request->date;
-        $notule->url = 'http://cdn.oshu.nl/'. $filename;
+        $notule->url = '/media/'. $filename;
         $notule->save();
 
         \Flash::success('Notule opgeslagen');
